@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://kit.fontawesome.com/557bad9d33.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script defer src="main.js"></script>
+  <title>Api weather</title>
+</head>
+
+<body>
+  <main>
+    <h2>Consulta el clima</h2>
+    <form id="form">
+      <input type="text" autocomplete="on" placeholder="Buscar por ciudad" class="search" id="searchbox" />
+      <i class="fa-solid fa-location-crosshairs"></i>
+    </form>
+    <div class="card" id="card">
+      <div class="card__background">
+        <div class="card__city" id="card__city">Bogota , col</div>
+        <div class="card__date" id="card__date">19/07/2022</div>
+      </div>
+      <div class="card__body">
+        <div class="card__temperature">
+          <div class="card__temp" id="card__temp">14ºC</div>
+          <img src="/imagen/soleado.jpg" class="temp__icon" id="temp__icon" />
+        </div>
+        <div class=".card__description" id="card__description">Sol</div>
+        <div class="range" id="Range">12 ºC  /  18 ºC</div>
+        </div>
+      </div>
+  </main>
+</body>
+
+</html>
