@@ -31,11 +31,19 @@ function updateImages(data) {
   forecastIcon.src = src;
 }
 
-const search = (query) => {
+const search = async (query) => {
+  getResource(query)
+    .then((data) => {
+      popularHtml(data);
+    })
+    .catch((err))
+}
+
+const getResource = (query) => {
   return new Promise ((resolve, reject) => {
     axios.get(`${api.url}?q=${query}&appid=${api.key}&lang=es`)
       .then((res) => {
-        popularHtml(res.data)
+        resolve(res.data)
       })
       .catch((err) => {
         reject(err)
