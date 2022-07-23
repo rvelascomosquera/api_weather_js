@@ -20,13 +20,13 @@ function onSubmit(event) {
 
 function updateImages(data) {
   const temp = toCelsius(data.main.temp);
-  let src = '/imagen/soleado.jpg';
+  let src = 'imagen/soleado.jpg';
   if (temp > 26) {
-    src = '/imagen/soleado.jpg';
+    src = 'imagen/soleado.jpg';
   } else if (temp < 25 && temp > 15) {
-    src = '/imagen/templado.png';
+    src = 'imagen/templado.png';
   } else if (temp < 14 ) {
-    src = '/imagen/frio.jpg';
+    src = 'imagen/frio.jpg';
   } 
   forecastIcon.src = src;
 }
@@ -43,10 +43,10 @@ const getResource = (query) => {
   return new Promise ((resolve, reject) => {
     axios.get(`${api.url}?q=${query}&appid=${api.key}&lang=es`)
       .then((res) => {
-        resolve(res.data)
+        resolve(res.data);
       })
       .catch((err) => {
-        reject(err)
+        reject(err);
       })
   })
 }
